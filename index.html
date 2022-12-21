@@ -15,12 +15,12 @@
 <body>
     <div id="app">
       
-        <ul>
+        <ul v-if="arrayEmail.length == 10">
             <li v-for="email in arrayEmail">
                 {{email}}
             </li>
         </ul>
-
+        <h2 v-else>Sto Caricando</h2>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
