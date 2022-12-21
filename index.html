@@ -14,14 +14,17 @@
 
 <body>
     <div id="app">
-      
-        <ul v-if="arrayEmail.length == 10">
-            <li v-for="email in arrayEmail">
-                {{email}}
-            </li>
-        </ul>
-        <h2 v-else>Sto Caricando</h2>
+        <div class="text-center">
 
+            <h2 class="mt-5">Generazione lista di 10 email</h2>
+            <ul v-if="arrayEmail.length == 10" class="list-unstyled mt-5">
+                <li v-for="email in arrayEmail" class="p-2">
+                    {{email}}
+                </li>
+            </ul>
+            <h2 v-else>Sto Caricando</h2>
+            
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
